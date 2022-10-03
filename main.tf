@@ -8,13 +8,11 @@ data "aci_tenant" "tenant" {
 
 data "aci_contract" "contract" {
   tenant_dn  =  data.aci_tenant.tenant.id
-  name       = "hashi2022-app-web"
   name       = var.aci_contract
 }
 
 data "aci_filter" "filter" {
 	tenant_dn = data.aci_tenant.tenant.id
-	name      = "hashi2022-app"
   name       = var.aci_filter
 }
 
